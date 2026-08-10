@@ -1,0 +1,70 @@
+# Build output
+[Bb]in/
+[Oo]bj/
+
+# Visual Studio files
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# VS Code
+.vscode/
+
+# Rider
+.idea/
+
+# NuGet
+*.nupkg
+*.snupkg
+.nuget/
+
+# Test results
+TestResults/
+*.trx
+
+# Coverage reports
+coverage/
+.coverage
+
+# Logs
+*.log
+
+# Environment files / secrets
+.env
+.env.*
+!.env.example
+
+# User-specific settings
+appsettings.Development.json
+appsettings.Local.json
+
+# Database files
+*.mdf
+*.ldf
+*.db
+*.sqlite
+
+# EF Core migrations build artifacts
+# (keep migrations themselves!)
+# Migrations/   <-- DO NOT ignore this
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+
+# Frontend dependencies (if you add one later)
+node_modules/
+dist/
+build/
+
+# Publish output
+publish/
+
+# ASP.NET generated client libraries
+wwwroot/lib/
