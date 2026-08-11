@@ -1,5 +1,0 @@
-<Solution>
-  <Project Path="PaintingGallery.Data/PaintingGallery.Data.csproj" />
-  <Project Path="PaintingGallery.Tests/PaintingGallery.Tests.csproj" />
-  <Project Path="PaintingGallery.Web/PaintingGallery.Web.csproj" />
-</Solution>
