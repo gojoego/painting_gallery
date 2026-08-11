@@ -3,18 +3,17 @@ using PaintingGallery.Data.Models;
 namespace PaintingGallery.Data.Data;
 public class ApplicationDbContext : DbContext
 {
-    public ApplicationDbContext(
-        DbContextOptions<ApplicationDbContext> options)
-        : base(options)
-    {
-    }
-
+    public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options): base(options){}
     public DbSet<Artwork> Artworks { get; set; }
-
-    protected override void OnModelCreating
-    (
-        ModelBuilder modelBuilder
-    )
+    
+    public async Task<List<Artwork>> GetPublishedArtworkAsync()
+    {
+        return await Artworks
+            .FromSqlRaw("EXEC sp_GetPublishedArtwork")
+            .AsNoTracking()
+            .ToListAsync();
+    }
+    protected override void OnModelCreating (ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Artwork>()
             .Property(a => a.Price)
