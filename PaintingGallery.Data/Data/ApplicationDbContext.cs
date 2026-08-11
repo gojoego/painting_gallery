@@ -13,11 +13,11 @@ public class ApplicationDbContext : DbContext
 
     protected override void OnModelCreating
     (
-        ModelBuilder modelBuilder 
+        ModelBuilder modelBuilder
     )
     {
         modelBuilder.Entity<Artwork>()
             .Property(a => a.Price)
-            .HasPrecision(18,2);
+            .HasPrecision(18, 2);
     }
 }
