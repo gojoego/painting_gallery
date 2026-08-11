@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
   <ItemGroup>
-    <ProjectReference Include="..\PaintingGallery.Data\PaintingGallery.data.csproj" />
+    <ProjectReference Include="..\PaintingGallery.Data\PaintingGallery.Data.csproj" />
   </ItemGroup>
 
   <ItemGroup>
