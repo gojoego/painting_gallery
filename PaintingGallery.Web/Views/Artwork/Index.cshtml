@@ -1,0 +1,15 @@
+@model List<PaintingGallery.Data.Models.Artwork>
+
+<h1>
+    Gallery
+</h1>
+
+@foreach (var artwork in Model)
+{
+    <div>
+        <h2>@artwork.Title</h2>
+        <p>@artwork.Dimensions</p>
+        <p>$@artwork.Price</p>
+    </div>
+}
+
