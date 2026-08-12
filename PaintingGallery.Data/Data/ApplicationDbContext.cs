@@ -3,9 +3,9 @@ using PaintingGallery.Data.Models;
 namespace PaintingGallery.Data.Data;
 public class ApplicationDbContext : DbContext
 {
-    public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options): base(options){}
+    public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
     public DbSet<Artwork> Artworks { get; set; }
-    
+
     public async Task<List<Artwork>> GetPublishedArtworkAsync()
     {
         return await Artworks
@@ -13,7 +13,7 @@ public class ApplicationDbContext : DbContext
             .AsNoTracking()
             .ToListAsync();
     }
-    protected override void OnModelCreating (ModelBuilder modelBuilder)
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Artwork>()
             .Property(a => a.Price)

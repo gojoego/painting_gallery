@@ -1,15 +1,22 @@
 @model List<PaintingGallery.Data.Models.Artwork>
 
-<h1>
-    Gallery
-</h1>
-
-@foreach (var artwork in Model)
-{
+<div class="container py-5">
     <div>
-        <h2>@artwork.Title</h2>
-        <p>@artwork.Dimensions</p>
-        <p>$@artwork.Price</p>
+        <h1>Gallery</h1>
+        <p>Original artwork by Diana Gallego</p>
     </div>
-}
+    <div class="row g-4">
+        @foreach (var artwork in Model)
+        {
+            <div class="col-12 col-md-6 col-lg-4 mt-3">
+                <h2 class="h5">@artwork.Title</h2>
+                <p class="text-muted mb-1">@artwork.Medium</p>
+                <p class="text-muted mb-1">@artwork.Dimensions</p>
+                <p class="mt-2">@artwork.Price.ToString("C")</p>
+            </div>
+        }
+    </div>
+
+</div>
+
 
