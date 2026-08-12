@@ -18,7 +18,7 @@ public class ApplicationDbContext : DbContext
         return await Artworks
             .AsNoTracking()
             .FirstOrDefaultAsync(a => a.Id == id && a.Status == "Published");
-    } 
+    }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Artwork>()
