@@ -14,4 +14,15 @@ public class ArtworkController : Controller
         var artworks = await _context.GetPublishedArtworkAsync();
         return View(artworks);
     }
+    public async Task<IActionResult> Details(int id)
+    {
+        var artwork = await _context.GetArtworkByIdAsync(id);
+
+        if (artwork == null)
+        {
+            return NotFound();
+        }
+
+        return View(artwork);
+    }
 }

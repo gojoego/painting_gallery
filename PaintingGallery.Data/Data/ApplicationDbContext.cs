@@ -13,6 +13,12 @@ public class ApplicationDbContext : DbContext
             .AsNoTracking()
             .ToListAsync();
     }
+    public async Task<Artwork?> GetArtworkByIdAsync(int id)
+    {
+        return await Artworks
+            .AsNoTracking()
+            .FirstOrDefaultAsync(a => a.Id == id && a.Status == "Published");
+    } 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Artwork>()
