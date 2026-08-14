@@ -5,7 +5,7 @@ CREATE TABLE dbo.Artworks (
     Medium NVARCHAR(MAX) NOT NULL,
     Dimensions NVARCHAR(MAX) NOT NULL,
     Price DECIMAL(18,2) NOT NULL,
-    Status NVARCHAR(MAX) NOT NULL,
+    Status NVARCHAR(20) NOT NULL,
     ImageUrl NVARCHAR(MAX) NOT NULL,
     CreatedDate DATETIME2(7) NOT NULL,
 
