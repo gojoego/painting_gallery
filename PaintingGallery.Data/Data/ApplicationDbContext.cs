@@ -21,8 +21,33 @@ public class ApplicationDbContext : DbContext
     }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<Artwork>()
-            .Property(a => a.Price)
-            .HasPrecision(18, 2);
+        base.OnModelCreating(modelBuilder);
+
+        modelBuilder.Entity<Artwork>(entity =>
+        {
+            entity
+                .Property(a => a.Price)
+                .HasPrecision(18, 2);
+
+            entity
+                .Property(a => a.Status)
+                .HasMaxLength(20)
+                .IsRequired();
+
+            entity
+                .ToTable(t => t.HasCheckConstraint(
+                    "CK_Artworks_Price_NonNegative",
+                    "[Price] >= 0"));
+
+            entity
+                .ToTable(t => t.HasCheckConstraint(
+                    "CK_Artworks_Status",
+                    "[Status] IN ('Draft', 'Published')"));
+
+            entity
+                .HasIndex(a => new { a.Status, a.CreatedDate })
+                .HasDatabaseName("IX_Artworks_Status_CreatedDate")
+                .IsDescending(false, true);
+        });
     }
 }

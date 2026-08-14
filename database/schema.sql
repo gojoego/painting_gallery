@@ -8,6 +8,15 @@ CREATE TABLE dbo.Artworks (
     Status NVARCHAR(MAX) NOT NULL,
     ImageUrl NVARCHAR(MAX) NOT NULL,
     CreatedDate DATETIME2(7) NOT NULL,
-    CONSTRAINT PK_Artworks PRIMARY KEY CLUSTERED (Id)
+
+    CONSTRAINT PK_Artworks PRIMARY KEY CLUSTERED (Id), 
+    CONSTRAINT CK_Artworks_Price_NonNegative
+        CHECK (Price >= 0),
+    CONSTRAINT CK_Artworks_STATUS 
+        CHECK (Status IN ('Draft', 'Published'))
 );
 GO
+
+CREATE INDEX IX_Artworks_Status_CreatedDate
+ON dbo.Artworks (Status, CreatedDate DESC);
+GO  

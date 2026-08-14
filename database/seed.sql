@@ -9,7 +9,7 @@ VALUES
         1200.00,
         'Published',
         '/images/golden-fields.jpg',
-        SYSDATETIME()
+        '2026-01-14T10:32:15'
     ),
     (
         'Blue Horizon',
@@ -19,7 +19,7 @@ VALUES
         1450.00,
         'Published',
         '/images/blue-horizon.jpg',
-        SYSDATETIME()
+        '2026-02-03T14:18:42'
     ),
     (
         'Evening Light',
@@ -29,7 +29,7 @@ VALUES
         950.00,
         'Published',
         '/images/evening-light.jpg',
-        SYSDATETIME()
+        '2026-02-27T17:45:09'
     ),
     (
         'Quiet Morning',
@@ -39,7 +39,7 @@ VALUES
         650.00,
         'Published',
         '/images/quiet-morning.jpg',
-        SYSDATETIME()
+        '2026-03-19T08:12:31'
     ),
     (
         'Summer Garden',
@@ -49,7 +49,7 @@ VALUES
         1100.00,
         'Published',
         '/images/summer-garden.jpg',
-        SYSDATETIME()
+        '2026-04-08T11:27:54'
     ),
     (
         'Study in Red',
@@ -59,7 +59,7 @@ VALUES
         800.00,
         'Published',
         '/images/study-in-red.jpg',
-        SYSDATETIME()
+        '2026-05-21T16:03:22'
     ),
     (
         'Autumn Path',
@@ -69,7 +69,7 @@ VALUES
         1300.00,
         'Published',
         '/images/autumn-path.jpg',
-        SYSDATETIME()
+        '2026-06-11T09:48:37'
     ),
     (
         'Coastal Mist',
@@ -79,7 +79,7 @@ VALUES
         1250.00,
         'Published',
         '/images/coastal-mist.jpg',
-        SYSDATETIME()
+        '2026-06-29T13:21:06'
     ),
     (
         'Still Waters',
@@ -89,7 +89,7 @@ VALUES
         750.00,
         'Published',
         '/images/still-waters.jpg',
-        SYSDATETIME()
+        '2026-07-17T15:36:48'
     ),
     (
         'Winter Trees',
@@ -99,6 +99,6 @@ VALUES
         575.00,
         'Draft',
         '/images/winter-trees.jpg',
-        SYSDATETIME()
+        '2026-08-02T12:14:25'
     );
 GO

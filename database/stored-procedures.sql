@@ -1,4 +1,4 @@
-CREATE PROCEDURE dbo.sp_GetPublishedArtwork
+CREATE OR ALTER PROCEDURE dbo.sp_GetPublishedArtwork
 AS
 BEGIN
     SET NOCOUNT ON;
@@ -15,6 +15,6 @@ BEGIN
         CreatedDate
     FROM dbo.Artworks
     WHERE Status = 'Published'
-    ORDER BY CreatedDate DESC;
+    ORDER BY CreatedDate DESC, Id DESC;
 END;
 GO
