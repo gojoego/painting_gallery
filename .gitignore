@@ -65,6 +65,7 @@ build/
 
 # Publish output
 publish/
+azure-publish/
 
 # ASP.NET generated client libraries
 wwwroot/lib/
