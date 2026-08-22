@@ -1,7 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using PaintingGallery.Data.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 namespace PaintingGallery.Data.Data;
-public class ApplicationDbContext : DbContext
+public class ApplicationDbContext : IdentityDbContext
 {
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
     public DbSet<Artwork> Artworks { get; set; }
